@@ -18,7 +18,7 @@
 <p class="p1"><span class="s1">&lt;head&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Contatore Babysitter - Multi Utente&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Contatore Babysitter - Famiglia&lt;/title&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>* {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
@@ -113,7 +113,7 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 255, 255, 0.3);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn:hover, .btn:active {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.3);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-1px);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
@@ -206,26 +206,15 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.loading {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0.7;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.sync-status {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>right: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: rgba(76, 175, 80, 0.8);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.local-mode {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: rgba(255, 152, 0, 0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 152, 0, 0.5);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 5px 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 11px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: 1000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.sync-status.offline {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: rgba(255, 152, 0, 0.8);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (max-width: 480px) {</span></p>
@@ -241,20 +230,22 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/head&gt;</span></p>
 <p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="syncStatus" class="sync-status"&gt;🌐 Online&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="header"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1&gt;👶 Babysitter&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Contatore Multi-Utente&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Contatore Ore Famiglia&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="local-mode"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>📱 Modalità Locale - Dati salvati su questo dispositivo</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Setup iniziale --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="setupSection"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="input-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;🔑 Setup Iniziale&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;👋 Chi sei tu?&lt;/h3&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="input-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="userNameInput"&gt;Il tuo nome:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="userNameInput"&gt;Seleziona il tuo nome:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;select id="userNameInput"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;option value=""&gt;Seleziona chi sei...&lt;/option&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;option value="Papà"&gt;👨 Papà&lt;/option&gt;</span></p>
@@ -267,15 +258,8 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="customNameInput"&gt;Nome personalizzato:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="customNameInput" placeholder="Inserisci il tuo nome"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="input-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="familyCodeInput"&gt;Codice Famiglia (condiviso):&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="familyCodeInput" placeholder="es: famiglia-rossi-2024"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;small style="opacity: 0.8; font-size: 12px; margin-top: 5px; display: block;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>💡 Usa lo stesso codice su tutti i dispositivi per condividere i dati</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/small&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="buttons"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn primary" onclick="setupUser()"&gt;✅ Inizia&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn primary" onclick="setupUser()"&gt;✅ Inizia ad Usare l'App&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
@@ -283,7 +267,7 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- App principale --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="appSection" class="hidden"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="user-info"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>👋 Ciao &lt;span id="currentUser"&gt;&lt;/span&gt; | Famiglia: &lt;span id="currentFamily"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>👋 Ciao &lt;span id="currentUser"&gt;&lt;/span&gt;!</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;br&gt;&lt;button style="background:none;border:none;color:white;text-decoration:underline;font-size:12px;cursor:pointer;" onclick="resetSetup()"&gt;Cambia utente&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
@@ -299,7 +283,7 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="stat-item"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="stat-label"&gt;Tariffa: €&lt;span id="hourlyRate"&gt;10.00&lt;/span&gt;/ora&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="last-update" id="lastUpdate"&gt;Ultimo aggiornamento: mai&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="last-update" id="lastUpdate"&gt;Nessun inserimento ancora&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Menu Principale --&gt;</span></p>
@@ -316,14 +300,11 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="showSetRate()"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>⚙️ Cambia Tariffa</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="refreshData()" style="background: rgba(33, 150, 243, 0.3);"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>🔄 Aggiorna Dati</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Sezione Aggiungi Ore --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="addHoursSection" class="input-section hidden"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;➕ Aggiungi Ore&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;➕ Aggiungi Ore Lavorate&lt;/h3&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="input-group"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="hoursInput"&gt;Ore Lavorate:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="hoursInput" step="0.25" min="0.25" max="24" placeholder="es: 3.5"&gt;</span></p>
@@ -333,20 +314,20 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="noteInput" placeholder="es: oggi pomeriggio"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="buttons"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn success" onclick="addHours()"&gt;✅ Conferma&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn success" onclick="addHours()"&gt;✅ Aggiungi Ore&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn" onclick="showMainMenu()"&gt;🔙 Indietro&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Sezione Cambia Tariffa --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="setRateSection" class="input-section hidden"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;⚙️ Cambia Tariffa&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;⚙️ Cambia Tariffa Oraria&lt;/h3&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="input-group"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="rateInput"&gt;Nuova Tariffa (€/ora):&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="rateInput" step="0.50" min="1" placeholder="es: 12.50"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="buttons"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn success" onclick="setRate()"&gt;✅ Conferma&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn success" onclick="setRate()"&gt;✅ Conferma Tariffa&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn" onclick="showMainMenu()"&gt;🔙 Indietro&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
@@ -355,7 +336,7 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="historySection" class="hidden"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;📝 Storico Completo&lt;/h3&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="history" id="historyList"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="loading"&gt;Caricamento storico...&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div&gt;Caricamento storico...&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="buttons"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn" onclick="showMainMenu()"&gt;🔙 Indietro&lt;/button&gt;</span></p>
@@ -367,75 +348,91 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Firebase SDK --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-app-compat.min.js"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-database-compat.min.js"&gt;&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Configurazione Firebase (devi sostituire con le tue credenziali)</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const firebaseConfig = {
-    disabled: true
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Inizializza Firebase</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let app, database;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let isFirebaseEnabled = false;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>try {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>app = firebase.initializeApp(firebaseConfig);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>database = firebase.database();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>isFirebaseEnabled = true;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>console.log('Firebase inizializzato correttamente');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} catch (error) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>console.warn('Firebase non configurato, uso modalità locale:', error);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>isFirebaseEnabled = false;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Variabili globali</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Dati dell'app salvati localmente</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let currentUser = '';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let familyCode = '';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let localData = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let appData = {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>totalHours: 0,</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>hourlyRate: 10.0,</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>entries: [],</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>payments: []</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
 <p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Carica i dati salvati nel browser</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function loadData() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const savedUser = localStorage.getItem('babysitter_current_user');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const savedData = localStorage.getItem('babysitter_app_data');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (savedUser) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>currentUser = savedUser;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (savedData) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>appData = JSON.parse(savedData);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updateDisplay();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error('Errore caricamento dati:', error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Se ci sono errori, usa i dati di default</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>appData = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>totalHours: 0,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>hourlyRate: 10.0,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>entries: [],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>payments: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Salva i dati nel browser</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function saveData() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>localStorage.setItem('babysitter_current_user', currentUser);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>localStorage.setItem('babysitter_app_data', JSON.stringify(appData));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error('Errore salvataggio dati:', error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('❌ Errore nel salvataggio dati', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Setup utente iniziale</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function setupUser() {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const userName = document.getElementById('userNameInput').value;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const customName = document.getElementById('customNameInput').value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const family = document.getElementById('familyCodeInput').value.trim();</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!userName || !family) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('Compila tutti i campi!', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!userName) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('❌ Seleziona il tuo nome!', 'error');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentUser = userName === 'Altro' ? customName : userName;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>familyCode = family;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Salva le credenziali localmente</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localStorage.setItem('babysitter_user', currentUser);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localStorage.setItem('babysitter_family', familyCode);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!currentUser) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('❌ Inserisci il nome personalizzato!', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('currentUser').textContent = currentUser;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('currentFamily').textContent = familyCode;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('setupSection').classList.add('hidden');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('appSection').classList.remove('hidden');</span></p>
 <p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>saveData();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>loadData();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage(`👋 Benvenuto ${currentUser}!`, 'success');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Reset setup</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function resetSetup() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localStorage.removeItem('babysitter_user');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localStorage.removeItem('babysitter_family');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentUser = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localStorage.removeItem('babysitter_current_user');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('setupSection').classList.remove('hidden');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('appSection').classList.add('hidden');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('userNameInput').value = '';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('familyCodeInput').value = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('customNameInput').value = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('customNameGroup').style.display = 'none';</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Gestione nome personalizzato</span></p>
@@ -443,107 +440,24 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const customGroup = document.getElementById('customNameGroup');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (this.value === 'Altro') {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customGroup.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('customNameInput').focus();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customGroup.style.display = 'none';</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Carica dati (Firebase o locale)</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function loadData() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>updateSyncStatus('loading');</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (isFirebaseEnabled &amp;&amp; familyCode) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>try {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const snapshot = await database.ref('families/' + familyCode).once('value');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const data = snapshot.val();</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (data) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>localData = {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>totalHours: data.totalHours || 0,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>hourlyRate: data.hourlyRate || 10.0,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>entries: data.entries || [],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>payments: data.payments || []</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>};</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>updateSyncStatus('online');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// Prima volta, crea i dati iniziali</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>await saveData();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>updateSyncStatus('online');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} catch (error) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.error('Errore caricamento Firebase:', error);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>loadLocalData();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>updateSyncStatus('offline');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>loadLocalData();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updateSyncStatus('offline');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>updateDisplay();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Carica dati locali</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function loadLocalData() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const saved = localStorage.getItem('babysitter_data_' + familyCode);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (saved) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>localData = JSON.parse(saved);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Salva dati (Firebase o locale)</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function saveData() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Salva sempre localmente</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localStorage.setItem('babysitter_data_' + familyCode, JSON.stringify(localData));</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Salva su Firebase se disponibile</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (isFirebaseEnabled &amp;&amp; familyCode) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>try {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>await database.ref('families/' + familyCode).set({</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>...localData,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>lastUpdate: firebase.database.ServerValue.TIMESTAMP,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>lastUser: currentUser</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>updateSyncStatus('online');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>return true;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} catch (error) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.error('Errore salvataggio Firebase:', error);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>updateSyncStatus('offline');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>return false;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>return false;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Aggiorna visualizzazione</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Aggiorna la visualizzazione</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function updateDisplay() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('totalHours').textContent = localData.totalHours.toFixed(2) + 'h';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('totalAmount').textContent = '€' + (localData.totalHours * localData.hourlyRate).toFixed(2);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('hourlyRate').textContent = localData.hourlyRate.toFixed(2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('totalHours').textContent = appData.totalHours.toFixed(2) + 'h';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('totalAmount').textContent = '€' + (appData.totalHours * appData.hourlyRate).toFixed(2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('hourlyRate').textContent = appData.hourlyRate.toFixed(2);</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const lastEntry = localData.entries[localData.entries.length - 1];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (lastEntry) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (appData.entries.length &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const lastEntry = appData.entries[appData.entries.length - 1];</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const date = new Date(lastEntry.date).toLocaleString('it-IT');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('lastUpdate').textContent = `Ultimo aggiornamento: ${date}`;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Aggiorna stato sincronizzazione</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function updateSyncStatus(status) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const statusEl = document.getElementById('syncStatus');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>switch(status) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>case 'online':</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusEl.textContent = '🌐 Sincronizzato';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusEl.className = 'sync-status';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>break;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>case 'offline':</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusEl.textContent = '📱 Solo locale';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusEl.className = 'sync-status offline';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>break;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>case 'loading':</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusEl.textContent = '⏳ Caricamento...';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusEl.className = 'sync-status offline';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('lastUpdate').textContent = `Ultimo: ${date} da ${lastEntry.user}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('lastUpdate').textContent = 'Nessun inserimento ancora';</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
@@ -562,7 +476,7 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showSetRate() {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>hideAllSections();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('setRateSection').classList.remove('hidden');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('rateInput').value = localData.hourlyRate;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('rateInput').value = appData.hourlyRate;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('rateInput').focus();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
@@ -573,10 +487,10 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const historyList = document.getElementById('historyList');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>historyList.innerHTML = '';</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Mostra le ultime entrate</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (localData.entries.length &gt; 0) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>historyList.innerHTML += '&lt;h4 style="margin-bottom: 10px;"&gt;🕐 Ore Correnti:&lt;/h4&gt;';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>localData.entries.slice(-15).reverse().forEach(entry =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Mostra le ore correnti (non pagate)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (appData.entries.length &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>historyList.innerHTML += '&lt;h4 style="margin-bottom: 10px; color: #FFD700;"&gt;🕐 Ore da Pagare:&lt;/h4&gt;';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>appData.entries.slice(-15).reverse().forEach(entry =&gt; {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const date = new Date(entry.date).toLocaleDateString('it-IT');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const time = new Date(entry.date).toLocaleTimeString('it-IT', {hour: '2-digit', minute: '2-digit'});</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const note = entry.note ? ` - ${entry.note}` : '';</span></p>
@@ -589,10 +503,10 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Mostra gli ultimi pagamenti</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (localData.payments.length &gt; 0) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>historyList.innerHTML += '&lt;h4 style="margin: 20px 0 10px 0;"&gt;💰 Ultimi Pagamenti:&lt;/h4&gt;';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>localData.payments.slice(-8).reverse().forEach(payment =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Mostra i pagamenti passati</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (appData.payments.length &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>historyList.innerHTML += '&lt;h4 style="margin: 20px 0 10px 0; color: #51cf66;"&gt;💰 Pagamenti Effettuati:&lt;/h4&gt;';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>appData.payments.slice(-8).reverse().forEach(payment =&gt; {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const date = new Date(payment.date).toLocaleDateString('it-IT');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>historyList.innerHTML += `</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="history-item"&gt;</span></p>
@@ -603,8 +517,8 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (localData.entries.length === 0 &amp;&amp; localData.payments.length === 0) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>historyList.innerHTML = '&lt;p style="text-align: center; opacity: 0.7; padding: 40px;"&gt;Nessun dato ancora&lt;/p&gt;';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (appData.entries.length === 0 &amp;&amp; appData.payments.length === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>historyList.innerHTML = '&lt;p style="text-align: center; opacity: 0.7; padding: 40px;"&gt;Nessun dato ancora&lt;br&gt;&lt;br&gt;Inizia aggiungendo le prime ore! 🚀&lt;/p&gt;';</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
@@ -616,7 +530,7 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Aggiungi ore</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function addHours() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function addHours() {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const hoursInput = document.getElementById('hoursInput');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const noteInput = document.getElementById('noteInput');</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
@@ -624,11 +538,12 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const note = noteInput.value.trim();</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!hours || hours &lt;= 0 || hours &gt; 24) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('Inserisci un numero di ore valido (0.25 - 24)', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('❌ Inserisci un numero di ore valido (0.25 - 24)', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hoursInput.focus();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Aggiungi l'entrata</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Crea la nuova entry</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const entry = {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>date: new Date().toISOString(),</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hours: hours,</span></p>
@@ -636,76 +551,78 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>user: currentUser</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localData.entries.push(entry);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localData.totalHours += hours;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Aggiungi ai dati</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appData.entries.push(entry);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appData.totalHours += hours;</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const saved = await saveData();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Salva e aggiorna</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>saveData();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>updateDisplay();</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const syncText = saved ? ' (sincronizzato)' : ' (salvato localmente)';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage(`✅ Aggiunte ${hours}h${note ? ' - ' + note : ''}!${syncText}`, 'success');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage(`✅ Aggiunte ${hours}h${note ? ' - ' + note : ''}!`, 'success');</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Reset form</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Reset del form</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>hoursInput.value = '';</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>noteInput.value = '';</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Torna al menu dopo 2 secondi</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(showMainMenu, 2000);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Segna come pagato</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function markAsPaid() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (localData.totalHours === 0) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('Non ci sono ore da pagare!', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function markAsPaid() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (appData.totalHours === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('❌ Non ci sono ore da pagare!', 'error');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const amount = localData.totalHours * localData.hourlyRate;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const amount = appData.totalHours * appData.hourlyRate;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Conferma prima di procedere</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!confirm(`Confermi il pagamento di €${amount.toFixed(2)} per ${appData.totalHours.toFixed(2)} ore?`)) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Salva il pagamento</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localData.payments.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appData.payments.push({</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>date: new Date().toISOString(),</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hours: localData.totalHours,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>hours: appData.totalHours,</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>amount: amount,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>rate: localData.hourlyRate,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>rate: appData.hourlyRate,</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>user: currentUser</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Azzera il contatore</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localData.totalHours = 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localData.entries = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appData.totalHours = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appData.entries = [];</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const saved = await saveData();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Salva e aggiorna</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>saveData();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>updateDisplay();</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const syncText = saved ? ' (sincronizzato)' : ' (salvato localmente)';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage(`💰 Pagamento di €${amount.toFixed(2)} registrato! Contatore azzerato.${syncText}`, 'success');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage(`💰 Pagamento di €${amount.toFixed(2)} registrato! Contatore azzerato.`, 'success');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Imposta nuova tariffa</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function setRate() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Cambia tariffa</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function setRate() {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const rateInput = document.getElementById('rateInput');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const newRate = parseFloat(rateInput.value);</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!newRate || newRate &lt;= 0) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('Inserisci una tariffa valida', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!newRate || newRate &lt;= 0 || newRate &gt; 100) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showMessage('❌ Inserisci una tariffa valida (1 - 100 €/ora)', 'error');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>rateInput.focus();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>localData.hourlyRate = newRate;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const saved = await saveData();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const oldRate = appData.hourlyRate;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appData.hourlyRate = newRate;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>saveData();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>updateDisplay();</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const syncText = saved ? ' (sincronizzato)' : ' (salvato localmente)';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage(`⚙️ Tariffa aggiornata a €${newRate.toFixed(2)}/ora!${syncText}`, 'success');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage(`⚙️ Tariffa cambiata da €${oldRate.toFixed(2)} a €${newRate.toFixed(2)}/ora!`, 'success');</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(showMainMenu, 2000);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Aggiorna dati manualmente</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function refreshData() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage('🔄 Aggiornamento in corso...', 'success');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>await loadData();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>showMessage('✅ Dati aggiornati!', 'success');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Mostra messaggio</span></p>
@@ -715,34 +632,35 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>messageEl.className = `message ${type}-message`;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>messageEl.textContent = message;</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Rimuovi messaggi precedenti</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>messageArea.innerHTML = '';</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>messageArea.appendChild(messageEl);</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Rimuovi dopo 4 secondi</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>messageEl.remove();</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}, 4000);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Event listeners</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('hoursInput').addEventListener('keypress', function(e) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === 'Enter') addHours();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Event listeners per i tasti Invio</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener('keypress', function(e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === 'Enter') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (!document.getElementById('addHoursSection').classList.contains('hidden')) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>addHours();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else if (!document.getElementById('setRateSection').classList.contains('hidden')) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>setRate();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('rateInput').addEventListener('keypress', function(e) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.key === 'Enter') setRate();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Inizializza l'app</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Inizializza l'app quando la pagina è caricata</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Controlla se l'utente è già configurato</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const savedUser = localStorage.getItem('babysitter_user');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const savedFamily = localStorage.getItem('babysitter_family');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const savedUser = localStorage.getItem('babysitter_current_user');</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (savedUser &amp;&amp; savedFamily) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (savedUser) {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>currentUser = savedUser;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>familyCode = savedFamily;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('currentUser').textContent = currentUser;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('currentFamily').textContent = familyCode;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('setupSection').classList.add('hidden');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('appSection').classList.remove('hidden');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>loadData();</span></p>
@@ -751,13 +669,6 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('appSection').classList.add('hidden');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Auto-refresh ogni 30 secondi se online</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>setInterval(() =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (isFirebaseEnabled &amp;&amp; familyCode &amp;&amp; document.getElementById('mainMenu').classList.contains('hidden') === false) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>loadData();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}, 30000);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/body&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/html&gt;</span></p>
